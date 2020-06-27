@@ -1,0 +1,23 @@
+{
+  "name": "elizabeth_proxyserver",
+  "version": "1.0.0",
+  "description": "A proxy server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PetToyCo/elizabeth_ProxyServer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PetToyCo/elizabeth_ProxyServer/issues"
+  },
+  "homepage": "https://github.com/PetToyCo/elizabeth_ProxyServer#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
