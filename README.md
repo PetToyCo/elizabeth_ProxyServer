@@ -28,3 +28,4 @@ From within the root directory:
 npm install
 
 ### Running Tests
+From the root directory: npm test
