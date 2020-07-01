@@ -19,6 +19,7 @@ app.get('/product', (req, res) => {
 
 })
 
-app.listen(3000, () => {
-  console.log('Proxy server is listening on PORT 3000');
-})
+module.exports = app;
+// app.listen(3000, () => {
+//   console.log('Proxy server is listening on PORT 3000');
+// })
