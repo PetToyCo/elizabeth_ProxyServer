@@ -30,7 +30,7 @@ npm install
 
 ### Running Tests
 To run the Jest suite:
-From the root directory: npm test
+From the root directory: npm run test
 
 To run the specRunner suite:
 From the root directory: npm start
