@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SpecRunner</title>
+    <script crossorigin src="https://unpkg.com/chai/chai.js"></script>
+    <script crossorigin src="https://unpkg.com/mocha/mocha.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+  </head>
+  <body>            
+    <iframe id='proxy' src="http://127.0.0.1:3000/product?itemID=115">
+    </iframe>
+    <h4>Tests running...</h4>
+    <div id='mocha'></div>
+    <script class="mocha-init">
+      mocha.setup('bdd');
+      mocha.checkLeaks();
+    </script>
+    <script src='DOMtests.js'></script>
+    <script class="mocha-exec">
+      setTimeout(() => {
+        var iframe = document.getElementById('proxy');
+        window.iframeDOM = iframe.contentWindow.document;
+       mocha.run();
+      }, 2500);
+    </script>
+  </body>
+</html>
