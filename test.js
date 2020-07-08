@@ -5,14 +5,14 @@ const request = supertest(app);
 describe('Express server', () => {
 
   it('gets the /product endpoint', async (done) => {
-    var response = await request.get('/product?itemId=100')
+    var response = await request.get('/product?itemID=100')
 
     expect(response.status).toBe(200);
     done();
   });
 
   it('should get a 404 error if an invalid item id is provided', async (done) => {
-    var response = await request.get('/product?itemId=200')
+    var response = await request.get('/product?itemID=200')
 
     expect(response.status).toBe(404);
     done();
