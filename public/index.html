@@ -12,11 +12,27 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
+  <div id="MODAL_ATTACH_POINT" style="position: absolute; top: -20px; left: -20px; visibility: hidden; overflow: hidden; background-color: rgba(0, 0, 0, 0.4); z-index: 100;"></div>
   <h1>HTML</h1>
   <div id="gallery"></div>
   <div id='description'></div>
   <div id="REVIEWS_ATTACH_POINT"></div>
 </body>
+<script>
+  const callback = function() {
+    const body = document.body;
+    let height = body.scrollHeight + 40;
+    let width = body.scrollWidth + 40;
+    const modalAttachPoint = document.getElementById("MODAL_ATTACH_POINT");
+    modalAttachPoint.style.height = `${height}px`;
+    modalAttachPoint.style.width = `${width}px`;
+    window.addEventListener('resize', callback);
+    const targetNode = document.body;
+    const observer = new MutationObserver(callback);
+    const config = { childList: true, subtree: true, attributes: false };
+    observer.observe(targetNode, config);
+  };
+</script>
 <script crossorigin src="http://127.0.0.1:3002/bundle.js"></script>
 <script type="text/javascript" src="http://localhost:3001/app.js"></script>
 <script type="text/javascript" src="http://localhost:3003/bundle.js"></script>
