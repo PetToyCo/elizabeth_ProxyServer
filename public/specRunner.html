@@ -7,21 +7,25 @@
     <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
   </head>
   <body>            
-    <iframe id='proxy' src="http://127.0.0.1:3000/product?itemID=115">
+    <iframe id='proxy' height='1' width='1' src="http://127.0.0.1:3000/product?itemID=115">
     </iframe>
+
     <h4>Tests running...</h4>
-    <div id='mocha'></div>
+    <div id='mocha'>
     <script class="mocha-init">
       mocha.setup('bdd');
       mocha.checkLeaks();
     </script>
+
     <script src='DOMtests.js'></script>
+
     <script class="mocha-exec">
       setTimeout(() => {
         var iframe = document.getElementById('proxy');
         window.iframeDOM = iframe.contentWindow.document;
        mocha.run();
-      }, 2500);
+      }, 2000);
     </script>
+    </div>
   </body>
 </html>
