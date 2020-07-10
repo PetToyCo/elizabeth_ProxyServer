@@ -7,7 +7,7 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/product', (req, res) => {
-  var itemId = req.query.itemId;
+  var itemId = req.query.itemID;
   var itemNum = Number.parseInt(itemId);
   console.log('itemNum: ', itemNum);
 
