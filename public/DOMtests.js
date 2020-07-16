@@ -16,6 +16,11 @@ describe('Proxy Server Basic Setup', () => {
     expect(gallery).to.not.be.null;
   });
 
+  it('should have an element with id "mainTitleMount"', () => {
+    var mainTitle = iframeDOM.getElementById('mainTitleMount');
+    expect(mainTitle).to.not.be.null;
+  });
+
   it('should have an element with id "MODAL_ATTACH_POINT"', () => {
     var modal = iframeDOM.getElementById('MODAL_ATTACH_POINT');
     expect(modal).to.not.be.null;
@@ -57,5 +62,17 @@ describe('Proxy Server Service Loading', () => {
     var span = iframeDOM.getElementById('item-value-reviews');
     var { innerHTML } = span;
     expect(innerHTML).to.equal('16');
+  });
+
+  //mainTitle
+  it('should have a div from the mainTitle service with id "title"', () => {
+    var div = iframeDOM.getElementById('title');
+    expect(div).to.not.be.null;
+  });
+
+  it('should display information from the db for item 105 in the mainTitle service', () => {
+    var div = iframeDOM.getElementById('title');
+    var { innerHTML } = div;
+    expect(innerHTML).to.equal('IpsumLorem Plush Bunny with Squeaker, 6" X 4.5"');
   });
 });
