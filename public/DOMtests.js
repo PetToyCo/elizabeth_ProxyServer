@@ -21,6 +21,21 @@ describe('Proxy Server Basic Setup', () => {
     expect(mainTitle).to.not.be.null;
   });
 
+  it('should have an element with id "RECOMMENDATIONS_CUSTOMER_ATTACH_POINT"', () => {
+    var recommendations = iframeDOM.getElementById('RECOMMENDATIONS_CUSTOMER_ATTACH_POINT');
+    expect(recommendations).to.not.be.null;
+  });
+
+  it('should have an element with id "RECOMMENDATIONS_TREAT_ATTACH_POINT"', () => {
+    var treat = iframeDOM.getElementById('RECOMMENDATIONS_TREAT_ATTACH_POINT');
+    expect(treat).to.not.be.null;
+  });
+
+  it('should have an element with id "RECOMMENDATIONS_PET_ATTACH_POINT"', () => {
+    var pet = iframeDOM.getElementById('RECOMMENDATIONS_PET_ATTACH_POINT');
+    expect(pet).to.not.be.null;
+  });
+
   it('should have an element with id "MODAL_ATTACH_POINT"', () => {
     var modal = iframeDOM.getElementById('MODAL_ATTACH_POINT');
     expect(modal).to.not.be.null;
@@ -74,5 +89,17 @@ describe('Proxy Server Service Loading', () => {
     var div = iframeDOM.getElementById('title');
     var { innerHTML } = div;
     expect(innerHTML).to.equal('IpsumLorem Plush Bunny with Squeaker, 6" X 4.5"');
+  });
+
+  //recommendations
+  it('should have a div from the recommendations service with id "recommendation-submodule-treat"', () => {
+    var div = iframeDOM.getElementById('recommendation-submodule-treat');
+    expect(div).to.not.be.null;
+  });
+
+  it('should display information from the db for item 105 in the recommendations service', () => {
+    var div = iframeDOM.getElementById('PR-price-180');
+    var { innerHTML } = div;
+    expect(innerHTML).to.equal('$39.16');
   });
 });
