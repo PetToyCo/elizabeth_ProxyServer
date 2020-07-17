@@ -1,5 +1,5 @@
 # elizabeth_ProxyServer
-This is a proxy server for the individual PetToyCo services. Currently it is setup to serve only the description_directions_attributes_ service.
+This is a proxy server for PetToyCo's services. Currently it is set up to serve the 5 services listed in Related Projects.
 
 ## Related Projects
 - https://github.com/PetToyCo/reviews
