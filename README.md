@@ -12,8 +12,10 @@ This is a proxy server for PetToyCo's services. Currently it is set up to serve 
   1. Usage
   2. Requirements
   3. Development
+  4. Production
 
 ## Usage
+Note: This service is currently in Production mode. To change it to development mode, please see the Production section below before proceeding.
 1. From the root directory: npm install
 2. Make sure the first five services in Related Projects are downloaded to your computer. Follow instructions in their respective READMEs to install any dependencies, seed databases, and start each of their servers.
 3. From the root directory: npm start
@@ -36,3 +38,7 @@ From the root directory: npm run test
 To run the specRunner suite:
 From the root directory: npm start
 Navigate to http://127.0.0.1:3000/specRunner.html in the browser and wait 2 seconds.
+
+## Production
+To return this service to development mode:
+1. In index.html, uncomment lines 49-53. Then comment out lines 56-60.
