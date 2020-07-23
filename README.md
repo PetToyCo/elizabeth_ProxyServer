@@ -7,6 +7,7 @@ This is a proxy server for PetToyCo's services. Currently it is set up to serve 
 - https://github.com/PetToyCo/description_directions_attributes_
 - https://github.com/PetToyCo/mainTitle_price
 - https://github.com/PetToyCo/ProductRecommendations
+- https://github.com/PetToyCo/deliver-pickup
 
 ## Table of Contents
   1. Usage
@@ -32,6 +33,7 @@ From within the root directory:
 npm install
 
 ### Running Tests
+Note: Tests will only work while proxy is in development mode.
 To run the Jest suite:
 From the root directory: npm run test
 
@@ -41,4 +43,4 @@ Navigate to http://127.0.0.1:3000/specRunner.html in the browser and wait 2 seco
 
 ## Production
 To return this service to development mode:
-1. In index.html, uncomment lines 49-53. Then comment out lines 56-60.
+1. In index.html, uncomment lines 50-55. Then comment out lines 58-63.
