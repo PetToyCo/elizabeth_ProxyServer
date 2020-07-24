@@ -43,4 +43,4 @@ Navigate to http://127.0.0.1:3000/specRunner.html in the browser and wait 2 seco
 
 ## Production
 To return this service to development mode:
-1. In index.html, uncomment lines 50-55. Then comment out lines 58-63.
+1. In index.html, uncomment lines 50-55. Then comment out lines 58-63. Uncomment lines 13-14, then comment out lines 15-16.
