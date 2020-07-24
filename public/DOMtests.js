@@ -36,6 +36,11 @@ describe('Proxy Server Basic Setup', () => {
     expect(pet).to.not.be.null;
   });
 
+  it('should have an element with id "itemAvailability"', () => {
+    var deliver = iframeDOM.getElementById('itemAvailability');
+    expect(deliver).to.not.be.null;
+  });
+
   it('should have an element with id "MODAL_ATTACH_POINT"', () => {
     var modal = iframeDOM.getElementById('MODAL_ATTACH_POINT');
     expect(modal).to.not.be.null;
@@ -56,8 +61,8 @@ describe('Proxy Server Service Loading', () => {
   });
 
   //description
-  it('should have a button from the description service with id "directions"', () => {
-    var button = iframeDOM.getElementById('directions');
+  it('should have a button from the description service with id "directionsB"', () => {
+    var button = iframeDOM.getElementById('directionsB');
     expect(button).to.not.be.null;
   });
 
@@ -102,4 +107,16 @@ describe('Proxy Server Service Loading', () => {
     var { innerHTML } = div;
     expect(innerHTML).to.equal('$39.16');
   });
+
+    //deliver
+    it('should have a div from the recommendations service with className "deliveryPickupContainers"', () => {
+      var divs = iframeDOM.getElementsByClassName('deliveryPickupContainers');
+      expect(divs).to.not.be.null;
+    });
+  
+    it('should display information from the db for item 105 in the delivery service', () => {
+      var divs = iframeDOM.getElementsByClassName('deliverPickupItemPrice')[0];
+      var { innerHTML } = divs;
+      expect(innerHTML).to.not.be.null;
+    });
 });
