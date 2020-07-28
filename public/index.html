@@ -10,10 +10,10 @@
   <script crossorigin src="https://momentjs.com/downloads/moment.min.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
   crossorigin="anonymous" defer></script>
-  <link rel="stylesheet" href="http://localhost:3003/style.css" async>
-  <link rel="stylesheet" href="http://localhost:3006/style.css" async>
-  <!-- <link rel="stylesheet" href="http://18.224.229.28:3003/style.css" async>
-  <link rel="stylesheet" href="http://18.224.229.28:3006/style.css" async> -->
+  <!-- <link rel="stylesheet" href="http://localhost:3003/style.css" async>
+  <link rel="stylesheet" href="http://localhost:3006/style.css" async> -->
+  <link rel="stylesheet" href="http://18.224.229.28:3003/style.css" async>
+  <link rel="stylesheet" href="http://18.224.229.28:3006/style.css" async>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" async>
 </head>
 <body>
@@ -54,14 +54,14 @@
 <script async>
   document.addEventListener('DOMContentLoaded', () => {
     //dev
-    const E_IP = '127.0.0.1';
-    const N_IP = '127.0.0.1';
-    const K_IP = '127.0.0.1';
+    // const E_IP = '127.0.0.1';
+    // const N_IP = '127.0.0.1';
+    // const K_IP = '127.0.0.1';
 
     //deployed
-    // const E_IP = '52.14.208.55';
-    // const N_IP = '54.183.137.155';
-    // const K_IP = '18.224.229.28';
+    const E_IP = '52.14.208.55';
+    const N_IP = '54.183.137.155';
+    const K_IP = '18.224.229.28';
 
     axios.get(`http://${N_IP}:3001/app.js`)
       .then(response => {
